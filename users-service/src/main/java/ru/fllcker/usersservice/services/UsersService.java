@@ -36,5 +36,7 @@ public class UsersService {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found!"));
     }
 
-
+    public boolean existsByEmail(String email) {
+        return usersRepository.existsByEmail(email);
+    }
 }

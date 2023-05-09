@@ -12,7 +12,7 @@ public class UsersClient {
     private final String USERS_SERVICE = "lb://USERS-SERVICE/users/";
 
     public User findByEmail(String email) {
-        return restTemplate.getForObject(USERS_SERVICE + "private/email/" + email, User.class);
+        return restTemplate.getForObject(USERS_SERVICE + "private/email?email=" + email, User.class);
     }
 
     public void create(User user) {

@@ -17,8 +17,8 @@ public class PrivateUsersController {
         return usersService.create(createUserDto);
     }
 
-    @GetMapping("email/{email}")
-    public User findByEmail(@PathVariable String email) {
+    @GetMapping("email")
+    public User findByEmail(@RequestParam String email) {
         return usersService.findByEmail(email);
     }
 }
