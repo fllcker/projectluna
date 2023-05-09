@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="added api-gateway">
-      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/controllers/ExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/controllers/PrivateUsersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/dto/CreateUserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/repositories/IUsersRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/services/UsersService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-service/src/main/resources/application.yml" afterDir="false" />
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="added users-service, with private method create">
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/models/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/repositories/ITokensRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/services/TokensService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/controllers/PrivateUsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/controllers/PrivateUsersController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +23,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/api-gateway">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/auth-service">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/config-server">
@@ -144,6 +145,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="auth-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.fllcker.authservice.AuthServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="config-server.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.fllcker.configserver.ConfigServerApplication" />
@@ -174,7 +182,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683624645499</updated>
-      <workItem from="1683624647117" duration="3666000" />
+      <workItem from="1683624647117" duration="5689000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -204,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683625914332</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added users-service, with private method create">
+      <created>1683628500061</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683628500062</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,11 +231,13 @@
       <path value="$PROJECT_DIR$/eureka-server" />
       <path value="$PROJECT_DIR$/api-gateway" />
       <path value="$PROJECT_DIR$/users-service" />
+      <path value="$PROJECT_DIR$/auth-service" />
     </ignored-roots>
     <MESSAGE value="init root project" />
     <MESSAGE value="added config-server" />
     <MESSAGE value="added eureka-server" />
     <MESSAGE value="added api-gateway" />
-    <option name="LAST_COMMIT_MESSAGE" value="added api-gateway" />
+    <MESSAGE value="added users-service, with private method create" />
+    <option name="LAST_COMMIT_MESSAGE" value="added users-service, with private method create" />
   </component>
 </project>
