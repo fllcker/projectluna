@@ -1,0 +1,17 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: USERS-SERVICE
+
+  data:
+    mongodb:
+      uri: mongodb://185.125.202.202:27017/luna_users
+      database: luna_users
+
+  config:
+    import: optional:configserver:http://localhost:8888
+
+  profiles:
+    active: eclient

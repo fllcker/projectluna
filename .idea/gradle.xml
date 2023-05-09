@@ -28,10 +28,26 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/entities" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/entities" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/eureka-server" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/eureka-server" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/users-service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/users-service" />
           </set>
         </option>
       </GradleProjectSettings>
