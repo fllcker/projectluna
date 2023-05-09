@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="added config-server">
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="added eureka-server">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +16,9 @@
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/api-gateway">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/config-server">
@@ -59,6 +64,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ConfigServerApplication">
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api-gateway.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.fllcker.apigateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="config-server.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.fllcker.configserver.ConfigServerApplication" />
@@ -82,7 +94,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683624645499</updated>
-      <workItem from="1683624647117" duration="953000" />
+      <workItem from="1683624647117" duration="1243000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -98,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683625555867</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added eureka-server">
+      <created>1683625628150</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683625628150</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,9 +127,11 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/config-server" />
       <path value="$PROJECT_DIR$/eureka-server" />
+      <path value="$PROJECT_DIR$/api-gateway" />
     </ignored-roots>
     <MESSAGE value="init root project" />
     <MESSAGE value="added config-server" />
-    <option name="LAST_COMMIT_MESSAGE" value="added config-server" />
+    <MESSAGE value="added eureka-server" />
+    <option name="LAST_COMMIT_MESSAGE" value="added eureka-server" />
   </component>
 </project>
