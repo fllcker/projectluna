@@ -25,4 +25,16 @@ public class UsersService {
 
         return usersRepository.save(user);
     }
+
+    public User findById(String id) {
+        return usersRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found!"));
+    }
+
+    public User findByEmail(String email) {
+        return usersRepository.findByEmail(email)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found!"));
+    }
+
+
 }

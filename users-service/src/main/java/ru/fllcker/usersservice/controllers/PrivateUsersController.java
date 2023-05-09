@@ -1,10 +1,7 @@
 package ru.fllcker.usersservice.controllers;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ru.fllcker.usersservice.dto.CreateUserDto;
 import ru.fllcker.usersservice.models.User;
 import ru.fllcker.usersservice.services.UsersService;
@@ -18,5 +15,10 @@ public class PrivateUsersController {
     @PostMapping
     public User create(@RequestBody CreateUserDto createUserDto) {
         return usersService.create(createUserDto);
+    }
+
+    @GetMapping("email/{email}")
+    public User findByEmail(@PathVariable String email) {
+        return usersService.findByEmail(email);
     }
 }

@@ -22,4 +22,9 @@ public class Token {
     private String value;
 
     private String userId;
+
+    public Token(String value, String userId) {
+        this.value = value;
+        this.userId = userId;
+    }
 }
