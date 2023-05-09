@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="auth-service: +jwt authentication">
-      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/controllers/UsersController.java" afterDir="false" />
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="method findByEmail (users-controller): change pathvar to param&#10;&#10;added method existsByEmail to users-controller">
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/configs/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/clients/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/clients/UsersClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/controllers/PrivateUsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/controllers/PrivateUsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/services/UsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/AuthServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/AuthServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/configs/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/services/TokensService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/services/TokensService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/UsersServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/UsersServiceApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +204,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683624645499</updated>
-      <workItem from="1683624647117" duration="11261000" />
+      <workItem from="1683624647117" duration="12233000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -253,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683639176710</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="method findByEmail (users-controller): change pathvar to param&#10;&#10;added method existsByEmail to users-controller">
+      <created>1683639588033</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683639588033</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +283,7 @@
     <MESSAGE value="added users-service, with private method create" />
     <MESSAGE value="added auth-service, with tokens repository and service" />
     <MESSAGE value="auth-service: +jwt authentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="auth-service: +jwt authentication" />
+    <MESSAGE value="method findByEmail (users-controller): change pathvar to param&#10;&#10;added method existsByEmail to users-controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="method findByEmail (users-controller): change pathvar to param&#10;&#10;added method existsByEmail to users-controller" />
   </component>
 </project>

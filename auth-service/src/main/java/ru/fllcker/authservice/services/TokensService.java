@@ -12,8 +12,8 @@ import ru.fllcker.authservice.repositories.ITokensRepository;
 public class TokensService {
     private final ITokensRepository tokensRepository;
 
-    public Token create(Token token) {
-        return tokensRepository.save(token);
+    public void create(Token token) {
+        tokensRepository.save(token);
     }
 
     public Token findById(String id) {
