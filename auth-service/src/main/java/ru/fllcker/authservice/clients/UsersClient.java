@@ -3,6 +3,7 @@ package ru.fllcker.authservice.clients;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import ru.fllcker.authservice.dto.CreateUserDto;
 import ru.fllcker.authservice.dto.User;
 
 @Service
@@ -16,6 +17,12 @@ public class UsersClient {
     }
 
     public void create(User user) {
-        restTemplate.postForObject(USERS_SERVICE + "private", user, User.class);
+        CreateUserDto dto = CreateUserDto.builder()
+                        .email(user.getEmail())
+                        .password(user.getPassword())
+                        .firstName(user.getFirstName())
+                        .lastName(user.getLastName()).build();
+
+        restTemplate.postForObject(USERS_SERVICE + "private", dto, CreateUserDto.class);
     }
 }

@@ -10,3 +10,14 @@ spring:
 
   profiles:
     active: eclient, gateway
+
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://94.181.164.137:3000"
+            allowedHeaders: "*"
+            allowedMethods: "*"
