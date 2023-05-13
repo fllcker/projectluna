@@ -2,6 +2,7 @@ package ru.fllcker.tasksservice.security.config;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -17,9 +18,15 @@ import ru.fllcker.tasksservice.security.filter.JwtFilter;
 
 @Configuration
 @EnableWebSecurity
-@RequiredArgsConstructor
 public class SecurityConfig {
     private final JwtFilter jwtFilter;
+    private final String allowedOrigin;
+
+    public SecurityConfig(JwtFilter jwtFilter,
+                          @Value("${allowed.origin}") String allowedOrigin) {
+        this.jwtFilter = jwtFilter;
+        this.allowedOrigin = allowedOrigin;
+    }
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -40,17 +47,12 @@ public class SecurityConfig {
     }
 
     @Bean
-    public PasswordEncoder encoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(@NonNull CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://94.181.164.137:3000");
+                        .allowedOrigins(allowedOrigin);
             }
         };
     }

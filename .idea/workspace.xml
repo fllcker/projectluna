@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="init tasks-service">
-      <change afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/security/domain/JwtAuthentication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/security/filters/JwtFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/security/providers/AuthProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/security/providers/JwtProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/security/utils/JwtUtils.java" afterDir="false" />
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="added auth in tasks-service">
+      <change afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/models/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/configs/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/security/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +242,7 @@
       <workItem from="1683826880897" duration="2214000" />
       <workItem from="1683898346459" duration="11000" />
       <workItem from="1683918613233" duration="3306000" />
-      <workItem from="1683968788483" duration="3595000" />
+      <workItem from="1683968788483" duration="5795000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -329,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683972352216</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added auth in tasks-service">
+      <created>1683972880131</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1683972880131</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +362,8 @@
     <MESSAGE value="fixed api-gateway cors problem" />
     <MESSAGE value="fix config-service problem with main label" />
     <MESSAGE value="init tasks-service" />
-    <option name="LAST_COMMIT_MESSAGE" value="init tasks-service" />
+    <MESSAGE value="added auth in tasks-service" />
+    <option name="LAST_COMMIT_MESSAGE" value="added auth in tasks-service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
