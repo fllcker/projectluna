@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="added auth in tasks-service">
-      <change afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/models/Task.java" afterDir="false" />
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="added 'common' active profile (config), added Task entity, repository">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/configs/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/security/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +39,9 @@
     <projectState path="$PROJECT_DIR$/users-service">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/workspaces-service">
+      <ProjectState />
+    </projectState>
   </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
@@ -71,8 +71,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -105,7 +105,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/fllcker/IdeaProjects/projectluna/tasks-service/src/main/java/ru/fllcker/tasksservice",
+    "last_opened_file_path": "C:/Users/fllcker/IdeaProjects/projectluna/workspaces-service/src/main/java/ru/fllcker/workspacesservice",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -123,6 +123,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fllcker\IdeaProjects\projectluna\workspaces-service\src\main\java\ru\fllcker\workspacesservice" />
       <recent name="C:\Users\fllcker\IdeaProjects\projectluna\tasks-service\src\main\java\ru\fllcker\tasksservice" />
     </key>
   </component>
@@ -211,10 +212,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WorkspacesServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="workspaces-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.fllcker.workspacesservice.WorkspacesServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.GenerateSecrets" />
       <item itemvalue="Gradle.users-service [build]" />
       <item itemvalue="Spring Boot.TasksServiceApplication" />
+      <item itemvalue="Spring Boot.WorkspacesServiceApplication" />
       <item itemvalue="Spring Boot.AuthServiceApplication" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
@@ -242,7 +251,7 @@
       <workItem from="1683826880897" duration="2214000" />
       <workItem from="1683898346459" duration="11000" />
       <workItem from="1683918613233" duration="3306000" />
-      <workItem from="1683968788483" duration="5795000" />
+      <workItem from="1683968788483" duration="6561000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -335,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683972880131</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added 'common' active profile (config), added Task entity, repository">
+      <created>1683979520653</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1683979520653</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,6 +365,7 @@
       <path value="$PROJECT_DIR$/users-service" />
       <path value="$PROJECT_DIR$/auth-service" />
       <path value="$PROJECT_DIR$/tasks-service" />
+      <path value="$PROJECT_DIR$/workspaces-service" />
     </ignored-roots>
     <MESSAGE value="init root project" />
     <MESSAGE value="added config-server" />
@@ -363,7 +380,8 @@
     <MESSAGE value="fix config-service problem with main label" />
     <MESSAGE value="init tasks-service" />
     <MESSAGE value="added auth in tasks-service" />
-    <option name="LAST_COMMIT_MESSAGE" value="added auth in tasks-service" />
+    <MESSAGE value="added 'common' active profile (config), added Task entity, repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 'common' active profile (config), added Task entity, repository" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
