@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="added create method to workspace-service">
-      <change afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/repositories/IWorkspaceUserRepository.java" afterDir="false" />
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="workspaces-service: added method to find workspaces where user is member (findUserWorkspaces)">
+      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/exceptions/ErrorDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/exceptions/ExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/exceptions/RestTemplateErrorHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/domain/JwtAuthentication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/filter/JwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/providers/AuthProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/providers/JwtProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/util/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/configs/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/security/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/controllers/WorkspacesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/controllers/WorkspacesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/repositories/IWorkspacesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/repositories/IWorkspacesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/services/WorkspacesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/services/WorkspacesService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +39,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/eureka-server">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/groups-service">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/tasks-service">
@@ -109,7 +116,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/fllcker/IdeaProjects/projectluna/workspaces-service/src/main/java/ru/fllcker/workspacesservice",
+    "last_opened_file_path": "C:/Users/fllcker/IdeaProjects/projectluna/groups-service/src/main/java/ru/fllcker/groupsservice",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -118,7 +125,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "spring.configuration.checksum": "b6ea04a96ae614fafc8cc31cd16feb84",
+    "spring.configuration.checksum": "b3b403da5be38aee7e90c18089171b9b",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -127,6 +134,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fllcker\IdeaProjects\projectluna\groups-service\src\main\java\ru\fllcker\groupsservice" />
       <recent name="C:\Users\fllcker\IdeaProjects\projectluna\workspaces-service\src\main\java\ru\fllcker\workspacesservice" />
       <recent name="C:\Users\fllcker\IdeaProjects\projectluna\tasks-service\src\main\java\ru\fllcker\tasksservice" />
     </key>
@@ -202,6 +210,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GroupsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="groups-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.fllcker.groupsservice.GroupsServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TasksServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="tasks-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.fllcker.tasksservice.TasksServiceApplication" />
@@ -226,6 +241,7 @@
     <list>
       <item itemvalue="Application.GenerateSecrets" />
       <item itemvalue="Gradle.users-service [build]" />
+      <item itemvalue="Spring Boot.GroupsServiceApplication" />
       <item itemvalue="Spring Boot.TasksServiceApplication" />
       <item itemvalue="Spring Boot.WorkspacesServiceApplication" />
       <item itemvalue="Spring Boot.AuthServiceApplication" />
@@ -255,7 +271,8 @@
       <workItem from="1683826880897" duration="2214000" />
       <workItem from="1683898346459" duration="11000" />
       <workItem from="1683918613233" duration="3306000" />
-      <workItem from="1683968788483" duration="8769000" />
+      <workItem from="1683968788483" duration="8862000" />
+      <workItem from="1683988982667" duration="804000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -369,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683981139796</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="workspaces-service: added method to find workspaces where user is member (findUserWorkspaces)">
+      <created>1683982140595</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1683982140595</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,6 +408,7 @@
       <path value="$PROJECT_DIR$/auth-service" />
       <path value="$PROJECT_DIR$/tasks-service" />
       <path value="$PROJECT_DIR$/workspaces-service" />
+      <path value="$PROJECT_DIR$/groups-service" />
     </ignored-roots>
     <MESSAGE value="init root project" />
     <MESSAGE value="added config-server" />
@@ -401,7 +426,8 @@
     <MESSAGE value="added 'common' active profile (config), added Task entity, repository" />
     <MESSAGE value="init workspaces-service, added security" />
     <MESSAGE value="added create method to workspace-service" />
-    <option name="LAST_COMMIT_MESSAGE" value="added create method to workspace-service" />
+    <MESSAGE value="workspaces-service: added method to find workspaces where user is member (findUserWorkspaces)" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspaces-service: added method to find workspaces where user is member (findUserWorkspaces)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
