@@ -45,6 +45,14 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/tasks-service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/tasks-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/users-service" />
         <option name="modules">
           <set>

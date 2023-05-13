@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="added objectMapper bean, corsConfigurer bean">
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/dto/CreateUserDto.java" afterDir="false" />
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="fix config-service problem with main label">
+      <change afterPath="$PROJECT_DIR$/tasks-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/ru/fllcker/apigateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/ru/fllcker/apigateway/ApiGatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/clients/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/clients/UsersClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/configs/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/configs/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/controllers/UsersController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +31,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/eureka-server">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/tasks-service">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/users-service">
@@ -94,30 +90,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reactor&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;b6ea04a96ae614fafc8cc31cd16feb84&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "17",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "b6ea04a96ae614fafc8cc31cd16feb84",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -192,6 +188,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TasksServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="tasks-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.fllcker.tasksservice.TasksServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UsersServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="users-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.fllcker.usersservice.UsersServiceApplication" />
@@ -202,6 +205,7 @@
     <list>
       <item itemvalue="Application.GenerateSecrets" />
       <item itemvalue="Gradle.users-service [build]" />
+      <item itemvalue="Spring Boot.TasksServiceApplication" />
       <item itemvalue="Spring Boot.AuthServiceApplication" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
@@ -228,7 +232,8 @@
       <workItem from="1683731890051" duration="3232000" />
       <workItem from="1683826880897" duration="2214000" />
       <workItem from="1683898346459" duration="11000" />
-      <workItem from="1683918613233" duration="1925000" />
+      <workItem from="1683918613233" duration="3306000" />
+      <workItem from="1683968788483" duration="3091000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -293,7 +298,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683640693184</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fixed api-gateway cors problem">
+      <created>1683920974614</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683920974614</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix config-service problem with main label">
+      <created>1683971917258</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1683971917258</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,6 +325,7 @@
       <path value="$PROJECT_DIR$/api-gateway" />
       <path value="$PROJECT_DIR$/users-service" />
       <path value="$PROJECT_DIR$/auth-service" />
+      <path value="$PROJECT_DIR$/tasks-service" />
     </ignored-roots>
     <MESSAGE value="init root project" />
     <MESSAGE value="added config-server" />
@@ -316,7 +336,9 @@
     <MESSAGE value="auth-service: +jwt authentication" />
     <MESSAGE value="method findByEmail (users-controller): change pathvar to param&#10;&#10;added method existsByEmail to users-controller" />
     <MESSAGE value="added objectMapper bean, corsConfigurer bean" />
-    <option name="LAST_COMMIT_MESSAGE" value="added objectMapper bean, corsConfigurer bean" />
+    <MESSAGE value="fixed api-gateway cors problem" />
+    <MESSAGE value="fix config-service problem with main label" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix config-service problem with main label" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
