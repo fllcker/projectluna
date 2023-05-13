@@ -22,4 +22,6 @@ public class Group {
     private String title;
 
     private String creatorId;
+
+    private String workspaceId;
 }
