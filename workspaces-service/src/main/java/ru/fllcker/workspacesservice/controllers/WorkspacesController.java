@@ -11,6 +11,8 @@ import ru.fllcker.workspacesservice.dto.CreateWorkspaceDto;
 import ru.fllcker.workspacesservice.models.Workspace;
 import ru.fllcker.workspacesservice.services.WorkspacesService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("workspaces")
 @RequiredArgsConstructor
@@ -24,5 +26,11 @@ public class WorkspacesController {
 
         Workspace workspace = workspacesService.create(createWorkspaceDto);
         return ResponseEntity.ok(workspace);
+    }
+
+    @GetMapping("by/member")
+    public ResponseEntity<List<Workspace>> findUserWorkspaces() {
+        List<Workspace> userWorkspaces = workspacesService.findUserWorkspaces();
+        return ResponseEntity.ok(userWorkspaces);
     }
 }

@@ -8,13 +8,18 @@ import ru.fllcker.workspacesservice.clients.UsersClient;
 import ru.fllcker.workspacesservice.dto.CreateWorkspaceDto;
 import ru.fllcker.workspacesservice.dto.User;
 import ru.fllcker.workspacesservice.models.Workspace;
+import ru.fllcker.workspacesservice.models.WorkspaceUser;
+import ru.fllcker.workspacesservice.repositories.IWorkspaceUserRepository;
 import ru.fllcker.workspacesservice.repositories.IWorkspacesRepository;
 import ru.fllcker.workspacesservice.security.providers.AuthProvider;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class WorkspacesService {
     private final IWorkspacesRepository workspacesRepository;
+    private final IWorkspaceUserRepository workspaceUserRepository;
     private final AuthProvider authProvider;
     private final UsersClient usersClient;
 
@@ -34,5 +39,20 @@ public class WorkspacesService {
     public Workspace findById(String id) {
         return workspacesRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Workspace not found!"));
+    }
+
+    public List<Workspace> findUserWorkspaces(String email) {
+        User creator = usersClient.findByEmail(email);
+
+        List<WorkspaceUser> workspaceUsers = workspaceUserRepository.findByUserId(creator.getId());
+        List<String> workspaceIds = workspaceUsers.stream()
+                .map(WorkspaceUser::getWorkspaceId)
+                .toList();
+
+        return workspacesRepository.findByIdIn(workspaceIds);
+    }
+
+    public List<Workspace> findUserWorkspaces() {
+        return findUserWorkspaces(authProvider.getSubject());
     }
 }
