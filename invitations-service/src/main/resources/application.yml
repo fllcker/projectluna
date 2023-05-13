@@ -1,0 +1,20 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: INVITATIONS-SERVICE
+
+  data:
+    mongodb:
+      uri: mongodb://185.125.202.202:27017/luna_workspaces
+      database: luna_workspaces
+
+  config:
+    import: optional:configserver:http://localhost:8888
+
+  profiles:
+    active: common, eclient, secrets
+
+  kafka:
+    bootstrap-servers: localhost:29092

@@ -4,18 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="workspaces-service: added method to find workspaces where user is member (findUserWorkspaces)">
-      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/exceptions/ErrorDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/exceptions/ExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/exceptions/RestTemplateErrorHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/domain/JwtAuthentication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/filter/JwtFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/providers/AuthProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/providers/JwtProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/util/JwtUtils.java" afterDir="false" />
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="groups-service: added consumer (kafka) for addDefaultGroups&#10;workspaces-service: added producer to execute addDefaultGroups from groups-service">
+      <change afterPath="$PROJECT_DIR$/invitations-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/InvitationsServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/dto/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/exceptions/ErrorDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/exceptions/ExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/exceptions/RestTemplateErrorHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/domain/JwtAuthentication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/filter/JwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/providers/AuthProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/providers/JwtProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/util/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/test/java/ru/fllcker/invitationsservice/InvitationsServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/services/WorkspacesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/services/WorkspacesService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +55,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/groups-service">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/invitations-service">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/tasks-service">
@@ -82,8 +98,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -116,7 +132,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/fllcker/IdeaProjects/projectluna/groups-service/src/main/java/ru/fllcker/groupsservice",
+    "last_opened_file_path": "C:/Users/fllcker/IdeaProjects/projectluna/invitations-service/src/main/java/ru/fllcker/invitationsservice",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -134,9 +150,13 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fllcker\IdeaProjects\projectluna\invitations-service\src\main\java\ru\fllcker\invitationsservice" />
       <recent name="C:\Users\fllcker\IdeaProjects\projectluna\groups-service\src\main\java\ru\fllcker\groupsservice" />
       <recent name="C:\Users\fllcker\IdeaProjects\projectluna\workspaces-service\src\main\java\ru\fllcker\workspacesservice" />
       <recent name="C:\Users\fllcker\IdeaProjects\projectluna\tasks-service\src\main\java\ru\fllcker\tasksservice" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.fllcker.invitationsservice.dto" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -217,6 +237,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InvitationsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="invitations-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.fllcker.invitationsservice.InvitationsServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TasksServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="tasks-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.fllcker.tasksservice.TasksServiceApplication" />
@@ -242,6 +269,7 @@
       <item itemvalue="Application.GenerateSecrets" />
       <item itemvalue="Gradle.users-service [build]" />
       <item itemvalue="Spring Boot.GroupsServiceApplication" />
+      <item itemvalue="Spring Boot.InvitationsServiceApplication" />
       <item itemvalue="Spring Boot.TasksServiceApplication" />
       <item itemvalue="Spring Boot.WorkspacesServiceApplication" />
       <item itemvalue="Spring Boot.AuthServiceApplication" />
@@ -272,7 +300,7 @@
       <workItem from="1683898346459" duration="11000" />
       <workItem from="1683918613233" duration="3306000" />
       <workItem from="1683968788483" duration="8862000" />
-      <workItem from="1683988982667" duration="804000" />
+      <workItem from="1683988982667" duration="10206000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -393,11 +421,64 @@
       <option name="project" value="LOCAL" />
       <updated>1683982140595</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="init groups-service, added exceptions and security">
+      <created>1683989880940</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1683989880940</updated>
+    </task>
+    <task id="LOCAL-00019" summary="init groups-service, added exceptions and security">
+      <created>1683989950364</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1683989950364</updated>
+    </task>
+    <task id="LOCAL-00020" summary="groups-service: added yml configuration, added models and repositories for group, group-user (relations)">
+      <created>1683990455848</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1683990455848</updated>
+    </task>
+    <task id="LOCAL-00021" summary="groups-service: added ability to create new groups">
+      <created>1683992274923</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1683992274923</updated>
+    </task>
+    <task id="LOCAL-00022" summary="groups-service: added method - addDefaultGroups">
+      <created>1683993858716</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1683993858716</updated>
+    </task>
+    <task id="LOCAL-00023" summary="groups-service: added consumer (kafka) for addDefaultGroups&#10;workspaces-service: added producer to execute addDefaultGroups from groups-service">
+      <created>1683994985535</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1683994985536</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -409,6 +490,7 @@
       <path value="$PROJECT_DIR$/tasks-service" />
       <path value="$PROJECT_DIR$/workspaces-service" />
       <path value="$PROJECT_DIR$/groups-service" />
+      <path value="$PROJECT_DIR$/invitations-service" />
     </ignored-roots>
     <MESSAGE value="init root project" />
     <MESSAGE value="added config-server" />
@@ -427,7 +509,13 @@
     <MESSAGE value="init workspaces-service, added security" />
     <MESSAGE value="added create method to workspace-service" />
     <MESSAGE value="workspaces-service: added method to find workspaces where user is member (findUserWorkspaces)" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspaces-service: added method to find workspaces where user is member (findUserWorkspaces)" />
+    <MESSAGE value="groups-service: fix import in security config" />
+    <MESSAGE value="init groups-service, added exceptions and security" />
+    <MESSAGE value="groups-service: added yml configuration, added models and repositories for group, group-user (relations)" />
+    <MESSAGE value="groups-service: added ability to create new groups" />
+    <MESSAGE value="groups-service: added method - addDefaultGroups" />
+    <MESSAGE value="groups-service: added consumer (kafka) for addDefaultGroups&#10;workspaces-service: added producer to execute addDefaultGroups from groups-service" />
+    <option name="LAST_COMMIT_MESSAGE" value="groups-service: added consumer (kafka) for addDefaultGroups&#10;workspaces-service: added producer to execute addDefaultGroups from groups-service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
