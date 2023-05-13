@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="added 'common' active profile (config), added Task entity, repository">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="init workspaces-service, added security">
+      <change afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/clients/UsersClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/controllers/WorkspacesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/dto/CreateWorkspaceDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/dto/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/models/Workspace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/models/WorkspaceUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/repositories/IWorkspacesRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/services/WorkspacesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,8 +77,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -251,7 +257,7 @@
       <workItem from="1683826880897" duration="2214000" />
       <workItem from="1683898346459" duration="11000" />
       <workItem from="1683918613233" duration="3306000" />
-      <workItem from="1683968788483" duration="6561000" />
+      <workItem from="1683968788483" duration="7721000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -351,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683979520653</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="init workspaces-service, added security">
+      <created>1683979907655</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1683979907655</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +394,8 @@
     <MESSAGE value="init tasks-service" />
     <MESSAGE value="added auth in tasks-service" />
     <MESSAGE value="added 'common' active profile (config), added Task entity, repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="added 'common' active profile (config), added Task entity, repository" />
+    <MESSAGE value="init workspaces-service, added security" />
+    <option name="LAST_COMMIT_MESSAGE" value="init workspaces-service, added security" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
