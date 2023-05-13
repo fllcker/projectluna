@@ -12,6 +12,8 @@ import ru.fllcker.groupsservice.models.Group;
 import ru.fllcker.groupsservice.repositories.IGroupUserRepository;
 import ru.fllcker.groupsservice.repositories.IGroupsRepository;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class GroupsService {
@@ -33,5 +35,25 @@ public class GroupsService {
                 .build();
 
         return groupsRepository.save(group);
+    }
+
+    public void addDefaultGroups(String workspaceId) {
+        Group toDoGroup = Group.builder()
+                .title("To Do")
+                .workspaceId(workspaceId)
+                .build();
+
+        Group inProgressGroup = Group.builder()
+                .title("In progress")
+                .workspaceId(workspaceId)
+                .build();
+
+        Group doneGroup = Group.builder()
+                .title("Done")
+                .workspaceId(workspaceId)
+                .build();
+
+        List<Group> defaultGroups = List.of(toDoGroup, inProgressGroup, doneGroup);
+        groupsRepository.saveAll(defaultGroups);
     }
 }
