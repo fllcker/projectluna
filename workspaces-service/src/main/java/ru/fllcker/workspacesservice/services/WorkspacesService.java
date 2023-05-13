@@ -35,7 +35,7 @@ public class WorkspacesService {
                 .creatorId(creator.getId())
                 .build();
 
-        workspace = workspacesRepository.save(workspace);
+        workspacesRepository.save(workspace);
         this.addMember(workspace.getId(), creator.getId());
 
         workspacesProducer.executeAddDefaultGroups(workspace.getId());
@@ -49,6 +49,8 @@ public class WorkspacesService {
                 .workspaceId(workspaceId).build();
 
         workspaceUserRepository.save(workspaceUser);
+
+        // TODO: adding group for member
     }
 
     public Workspace findById(String id) {
