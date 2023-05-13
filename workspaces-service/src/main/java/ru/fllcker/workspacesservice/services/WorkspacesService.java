@@ -5,10 +5,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import ru.fllcker.workspacesservice.clients.UsersClient;
+import ru.fllcker.workspacesservice.dto.AddingPersonalGroupDto;
 import ru.fllcker.workspacesservice.dto.CreateWorkspaceDto;
 import ru.fllcker.workspacesservice.dto.User;
 import ru.fllcker.workspacesservice.models.Workspace;
 import ru.fllcker.workspacesservice.models.WorkspaceUser;
+import ru.fllcker.workspacesservice.mq.AddingPersonalGroupProducer;
 import ru.fllcker.workspacesservice.mq.WorkspacesProducer;
 import ru.fllcker.workspacesservice.repositories.IWorkspaceUserRepository;
 import ru.fllcker.workspacesservice.repositories.IWorkspacesRepository;
@@ -24,6 +26,7 @@ public class WorkspacesService {
     private final AuthProvider authProvider;
     private final UsersClient usersClient;
     private final WorkspacesProducer workspacesProducer;
+    private final AddingPersonalGroupProducer addingPersonalGroupProducer;
 
     public Workspace create(CreateWorkspaceDto createWorkspaceDto) {
         User creator = usersClient.findByEmail(authProvider.getSubject());
@@ -50,7 +53,9 @@ public class WorkspacesService {
 
         workspaceUserRepository.save(workspaceUser);
 
-        // TODO: adding group for member
+        // adding group for member
+        AddingPersonalGroupDto addingPersonalGroupDto = new AddingPersonalGroupDto(workspaceId, userId);
+        addingPersonalGroupProducer.executeAddPersonalGroup(addingPersonalGroupDto);
     }
 
     public Workspace findById(String id) {
