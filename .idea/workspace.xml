@@ -4,31 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="groups-service: added consumer (kafka) for addDefaultGroups&#10;workspaces-service: added producer to execute addDefaultGroups from groups-service">
-      <change afterPath="$PROJECT_DIR$/invitations-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/InvitationsServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/dto/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/exceptions/ErrorDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/exceptions/ExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/exceptions/RestTemplateErrorHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/domain/JwtAuthentication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/filter/JwtFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/providers/AuthProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/providers/JwtProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/util/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/src/test/java/ru/fllcker/invitationsservice/InvitationsServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="invitations-service: added invitation model and repository">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/clients/UsersClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/clients/WorkspacesClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/controllers/InvitationsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/dto/AddMemberToWorkspaceDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/dto/CreateInvitationDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/mq/AddingMemberProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/services/InvitationsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/services/WorkspacesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/services/WorkspacesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/models/Invitation.java" beforeDir="false" afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/models/Invitation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +142,7 @@
       <recent name="C:\Users\fllcker\IdeaProjects\projectluna\tasks-service\src\main\java\ru\fllcker\tasksservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.fllcker.invitationsservice.clients" />
       <recent name="ru.fllcker.invitationsservice.dto" />
     </key>
   </component>
@@ -300,7 +287,7 @@
       <workItem from="1683898346459" duration="11000" />
       <workItem from="1683918613233" duration="3306000" />
       <workItem from="1683968788483" duration="8862000" />
-      <workItem from="1683988982667" duration="10206000" />
+      <workItem from="1683988982667" duration="11988000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -463,7 +450,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683994985536</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="init invitations-service with security, configuration">
+      <created>1684002301493</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1684002301493</updated>
+    </task>
+    <task id="LOCAL-00025" summary="invitations-service: added invitation model and repository">
+      <created>1684002587218</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1684002587218</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +516,9 @@
     <MESSAGE value="groups-service: added ability to create new groups" />
     <MESSAGE value="groups-service: added method - addDefaultGroups" />
     <MESSAGE value="groups-service: added consumer (kafka) for addDefaultGroups&#10;workspaces-service: added producer to execute addDefaultGroups from groups-service" />
-    <option name="LAST_COMMIT_MESSAGE" value="groups-service: added consumer (kafka) for addDefaultGroups&#10;workspaces-service: added producer to execute addDefaultGroups from groups-service" />
+    <MESSAGE value="init invitations-service with security, configuration" />
+    <MESSAGE value="invitations-service: added invitation model and repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="invitations-service: added invitation model and repository" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

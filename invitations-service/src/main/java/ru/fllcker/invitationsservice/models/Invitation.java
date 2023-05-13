@@ -21,6 +21,8 @@ public class Invitation {
 
     private String creatorId;
 
+    private String targetId;
+
     private String workspaceId;
 
     @Builder.Default
