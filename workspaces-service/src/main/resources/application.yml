@@ -15,3 +15,6 @@ spring:
 
   profiles:
     active: common, eclient, secrets
+
+  kafka:
+    bootstrap-servers: localhost:29092

@@ -9,6 +9,7 @@ import ru.fllcker.workspacesservice.dto.CreateWorkspaceDto;
 import ru.fllcker.workspacesservice.dto.User;
 import ru.fllcker.workspacesservice.models.Workspace;
 import ru.fllcker.workspacesservice.models.WorkspaceUser;
+import ru.fllcker.workspacesservice.mq.WorkspacesProducer;
 import ru.fllcker.workspacesservice.repositories.IWorkspaceUserRepository;
 import ru.fllcker.workspacesservice.repositories.IWorkspacesRepository;
 import ru.fllcker.workspacesservice.security.providers.AuthProvider;
@@ -22,6 +23,7 @@ public class WorkspacesService {
     private final IWorkspaceUserRepository workspaceUserRepository;
     private final AuthProvider authProvider;
     private final UsersClient usersClient;
+    private final WorkspacesProducer workspacesProducer;
 
     public Workspace create(CreateWorkspaceDto createWorkspaceDto) {
         User creator = usersClient.findByEmail(authProvider.getSubject());
@@ -33,7 +35,10 @@ public class WorkspacesService {
                 .creatorId(creator.getId())
                 .build();
 
-        return workspacesRepository.save(workspace);
+        workspace = workspacesRepository.save(workspace);
+        workspacesProducer.executeAddDefaultGroups(workspace.getId());
+
+        return workspace;
     }
 
     public Workspace findById(String id) {
