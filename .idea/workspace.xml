@@ -4,15 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="workspaces-service: added consumer for adding member to workspace">
-      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/dto/AddingPersonalGroupDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/mq/AddingPersonalGroupConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/dto/AddingPersonalGroupDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/mq/AddingPersonalGroupProducer.java" afterDir="false" />
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="added producer, consumer, service-method to add personal group for everyone new member">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/services/GroupsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/services/GroupsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/services/WorkspacesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/services/WorkspacesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/configs/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groups-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groups-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invitations-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/invitations-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invitations-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/invitations-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspaces-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/security/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,8 +118,8 @@
   "keyToString": {
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "724",
-    "RequestMappingsPanelWidth1": "724",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -286,7 +296,7 @@
       <workItem from="1683898346459" duration="11000" />
       <workItem from="1683918613233" duration="3306000" />
       <workItem from="1683968788483" duration="8862000" />
-      <workItem from="1683988982667" duration="13928000" />
+      <workItem from="1683988982667" duration="16752000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -477,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684006096208</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="added producer, consumer, service-method to add personal group for everyone new member">
+      <created>1684006876717</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1684006876717</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +523,6 @@
       <path value="$PROJECT_DIR$/groups-service" />
       <path value="$PROJECT_DIR$/invitations-service" />
     </ignored-roots>
-    <MESSAGE value="added eureka-server" />
     <MESSAGE value="added api-gateway" />
     <MESSAGE value="added users-service, with private method create" />
     <MESSAGE value="added auth-service, with tokens repository and service" />
@@ -531,7 +547,8 @@
     <MESSAGE value="invitations-service: added invitation model and repository" />
     <MESSAGE value="invitations-service: corrected model, adding methods to create and accept invitations" />
     <MESSAGE value="workspaces-service: added consumer for adding member to workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspaces-service: added consumer for adding member to workspace" />
+    <MESSAGE value="added producer, consumer, service-method to add personal group for everyone new member" />
+    <option name="LAST_COMMIT_MESSAGE" value="added producer, consumer, service-method to add personal group for everyone new member" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

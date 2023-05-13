@@ -14,8 +14,4 @@ spring:
     import: optional:configserver:http://localhost:8888
 
   profiles:
-    active: common, eclient, secrets
-
-
-  kafka:
-    bootstrap-servers: localhost:29092
+    active: common, eclient, secrets, kafka, swagger

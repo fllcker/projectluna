@@ -37,7 +37,7 @@ public class SecurityConfig {
                         authz -> authz
                                 .requestMatchers(
                                         "/test/**",
-                                        "/workspaces/private/**").permitAll()
+                                        "/invitations/swagger/**").permitAll()
                                 .anyRequest().authenticated()
                                 .and()
                                 .addFilterAfter(jwtFilter, UsernamePasswordAuthenticationFilter.class)

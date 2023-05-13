@@ -37,6 +37,7 @@ public class SecurityConfig {
                         authz -> authz
                                 .requestMatchers(
                                         "/test/**",
+                                        "/workspaces/swagger/**",
                                         "/workspaces/private/**").permitAll()
                                 .anyRequest().authenticated()
                                 .and()
