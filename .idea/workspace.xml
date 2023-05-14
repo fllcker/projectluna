@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="groups-service: added method to find groups by workspace">
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="groups-service: fixed method to find groups by workspace, added method to find group + members by id">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/controllers/GroupsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/controllers/GroupsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/dto/GroupAndMembersDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/dto/GroupAndMembersDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/repositories/IGroupUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/repositories/IGroupUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/services/GroupsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/services/GroupsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/AuthServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/AuthServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/mq/CreateUserProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/mq/CreateUserProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/mq/AddingPersonalGroupConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/mq/AddingPersonalGroupConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/mq/AddingMemberProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/mq/AddingMemberProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/mq/CreateUserConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/mq/CreateUserConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/mq/AddingMemberConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/mq/AddingMemberConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/mq/AddingPersonalGroupProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/mq/AddingPersonalGroupProducer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,31 +118,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/fllcker/IdeaProjects/projectluna/invitations-service/src/main/java/ru/fllcker/invitationsservice",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "2c81c360a7d72aa41a998c974e8f518d",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/fllcker/IdeaProjects/projectluna/invitations-service/src/main/java/ru/fllcker/invitationsservice&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;2c81c360a7d72aa41a998c974e8f518d&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -379,7 +382,8 @@
       <workItem from="1683918613233" duration="3306000" />
       <workItem from="1683968788483" duration="8862000" />
       <workItem from="1683988982667" duration="17308000" />
-      <workItem from="1684047795798" duration="4523000" />
+      <workItem from="1684047795798" duration="5273000" />
+      <workItem from="1684059763692" duration="630000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -619,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684053587691</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="groups-service: fixed method to find groups by workspace, added method to find group + members by id">
+      <created>1684053919671</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1684053919671</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -648,7 +659,6 @@
       <path value="$PROJECT_DIR$/groups-service" />
       <path value="$PROJECT_DIR$/invitations-service" />
     </ignored-roots>
-    <MESSAGE value="fixed api-gateway cors problem" />
     <MESSAGE value="fix config-service problem with main label" />
     <MESSAGE value="init tasks-service" />
     <MESSAGE value="added auth in tasks-service" />
@@ -673,7 +683,8 @@
     <MESSAGE value="workspaces-service: +findById to controller" />
     <MESSAGE value="invitations-service: added method for find invitations for user" />
     <MESSAGE value="groups-service: added method to find groups by workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="groups-service: added method to find groups by workspace" />
+    <MESSAGE value="groups-service: fixed method to find groups by workspace, added method to find group + members by id" />
+    <option name="LAST_COMMIT_MESSAGE" value="groups-service: fixed method to find groups by workspace, added method to find group + members by id" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
