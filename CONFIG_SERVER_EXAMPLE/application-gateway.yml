@@ -1,0 +1,28 @@
+spring:
+  cloud:
+    gateway:
+      routes: 
+        - id: USERS-SERVICE
+          uri: lb://USERS-SERVICE
+          predicates:
+            - Path=/users/**
+        - id: AUTH-SERVICE
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/auth/**
+        - id: WORKSPACES-SERVICE
+          uri: lb://WORKSPACES-SERVICE
+          predicates:
+            - Path=/workspaces/**
+        - id: GROUPS-SERVICE
+          uri: lb://GROUPS-SERVICE
+          predicates:
+            - Path=/groups/**
+        - id: TASKS-SERVICE
+          uri: lb://TASKS-SERVICE
+          predicates:
+            - Path=/tasks/**
+        - id: INVITATIONS-SERVICE
+          uri: lb://INVITATIONS-SERVICE
+          predicates:
+            - Path=/invitations/**
