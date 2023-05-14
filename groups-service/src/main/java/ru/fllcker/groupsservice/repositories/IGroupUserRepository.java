@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface IGroupUserRepository extends MongoRepository<GroupUser, String> {
     List<GroupUser> findByGroupIdIn(List<String> groupIds);
+    List<GroupUser> findByGroupId(String groupId);
 }

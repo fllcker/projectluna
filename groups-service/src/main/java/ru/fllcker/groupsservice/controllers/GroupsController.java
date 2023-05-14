@@ -32,6 +32,13 @@ public class GroupsController {
         return ResponseEntity.ok(group);
     }
 
+    @GetMapping("id/{id}")
+    public ResponseEntity<GroupAndMembersDto> findGroupAndMembersById(@PathVariable String id) {
+        GroupAndMembersDto groupAndMemberById = groupsService.findGroupAndMemberById(id);
+
+        return ResponseEntity.ok(groupAndMemberById);
+    }
+
     @GetMapping("workspace/{workspaceId}")
     public ResponseEntity<List<GroupAndMembersDto>> findGroupsByWorkspace(@PathVariable String workspaceId) {
         List<GroupAndMembersDto> groupsByWorkspace = groupsService.findGroupsByWorkspace(workspaceId, authProvider.getSubject());

@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="invitations-service: added method for find invitations for user">
-      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/dto/GroupAndMembersDto.java" afterDir="false" />
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="groups-service: added method to find groups by workspace">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/controllers/GroupsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/controllers/GroupsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/dto/GroupAndMembersDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/dto/GroupAndMembersDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/repositories/IGroupUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/repositories/IGroupUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/repositories/IGroupsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/repositories/IGroupsRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/services/GroupsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/services/GroupsService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -380,7 +379,7 @@
       <workItem from="1683918613233" duration="3306000" />
       <workItem from="1683968788483" duration="8862000" />
       <workItem from="1683988982667" duration="17308000" />
-      <workItem from="1684047795798" duration="4165000" />
+      <workItem from="1684047795798" duration="4523000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -613,7 +612,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684052783983</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="groups-service: added method to find groups by workspace">
+      <created>1684053587691</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1684053587691</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,7 +648,6 @@
       <path value="$PROJECT_DIR$/groups-service" />
       <path value="$PROJECT_DIR$/invitations-service" />
     </ignored-roots>
-    <MESSAGE value="added objectMapper bean, corsConfigurer bean" />
     <MESSAGE value="fixed api-gateway cors problem" />
     <MESSAGE value="fix config-service problem with main label" />
     <MESSAGE value="init tasks-service" />
@@ -667,7 +672,8 @@
     <MESSAGE value="groups, workspaces service: refactor producer, consumer names" />
     <MESSAGE value="workspaces-service: +findById to controller" />
     <MESSAGE value="invitations-service: added method for find invitations for user" />
-    <option name="LAST_COMMIT_MESSAGE" value="invitations-service: added method for find invitations for user" />
+    <MESSAGE value="groups-service: added method to find groups by workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="groups-service: added method to find groups by workspace" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

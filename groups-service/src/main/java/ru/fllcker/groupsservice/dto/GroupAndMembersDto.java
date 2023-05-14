@@ -7,11 +7,13 @@ import lombok.Setter;
 import ru.fllcker.groupsservice.models.Group;
 import ru.fllcker.groupsservice.models.GroupUser;
 
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class GroupAndMembersDto {
     private Group group;
-    private GroupUser members;
+    private List<GroupUser> members;
 }

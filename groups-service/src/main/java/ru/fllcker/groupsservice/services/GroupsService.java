@@ -40,6 +40,18 @@ public class GroupsService {
         return groupsRepository.save(group);
     }
 
+    public Group findById(String id) {
+        return groupsRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Group not found!"));
+    }
+
+    public GroupAndMembersDto findGroupAndMemberById(String id) {
+        Group group = this.findById(id);
+        List<GroupUser> groupUsers = groupUserRepository.findByGroupId(group.getId());
+
+        return new GroupAndMembersDto(group, groupUsers);
+    }
+
     public List<GroupAndMembersDto> findGroupsByWorkspace(String workspaceId, String userEmail) {
         if (!workspacesClient.isContainsInWorkspaces(workspaceId, userEmail))
             throw new ResponseStatusException(HttpStatus.FORBIDDEN, "No access!");
@@ -51,7 +63,7 @@ public class GroupsService {
         List<GroupUser> relations = groupUserRepository.findByGroupIdIn(groupsIds);
 
         return groups.stream().map(group -> {
-            GroupUser rel = relations.stream().filter(v -> v.getGroupId().equals(group.getId())).findFirst().orElse(null);
+            List<GroupUser> rel = relations.stream().filter(v -> v.getGroupId().equals(group.getId())).toList();
             return new GroupAndMembersDto(group, rel);
         }).toList();
     }
