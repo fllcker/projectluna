@@ -14,6 +14,8 @@ import ru.fllcker.invitationsservice.mq.AddingMemberProducer;
 import ru.fllcker.invitationsservice.repositories.IInvitationsRepository;
 import ru.fllcker.invitationsservice.security.providers.AuthProvider;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class InvitationsService {
@@ -41,6 +43,15 @@ public class InvitationsService {
     public Invitation findById(String id) {
         return invitationsRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Invitation not found!"));
+    }
+
+    public List<Invitation> findByTarget(String targetId) {
+        return invitationsRepository.findByTargetId(targetId);
+    }
+
+    public List<Invitation> findInvitationsForUser(String email) {
+        User user = usersClient.findByEmail(authProvider.getSubject());
+        return this.findByTarget(user.getId());
     }
 
     public void accept(String invitationId) {

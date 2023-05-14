@@ -9,13 +9,17 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import ru.fllcker.invitationsservice.dto.CreateInvitationDto;
 import ru.fllcker.invitationsservice.models.Invitation;
+import ru.fllcker.invitationsservice.security.providers.AuthProvider;
 import ru.fllcker.invitationsservice.services.InvitationsService;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("invitations")
 @RequiredArgsConstructor
 public class InvitationsController {
     private final InvitationsService invitationsService;
+    private final AuthProvider authProvider;
 
     @PostMapping
     public ResponseEntity<Invitation> create(@RequestBody @Valid CreateInvitationDto createInvitationDto, BindingResult bindingResult) {
@@ -30,5 +34,12 @@ public class InvitationsController {
     public ResponseEntity<String> acceptInvite(@PathVariable String id) {
         invitationsService.accept(id);
         return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("me")
+    public ResponseEntity<List<Invitation>> findInvitationsForMe() {
+        List<Invitation> invitations = invitationsService.findInvitationsForUser(authProvider.getSubject());
+
+        return ResponseEntity.ok(invitations);
     }
 }
