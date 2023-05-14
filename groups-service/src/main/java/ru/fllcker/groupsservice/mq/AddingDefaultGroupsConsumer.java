@@ -7,10 +7,10 @@ import ru.fllcker.groupsservice.services.GroupsService;
 
 @Service
 @RequiredArgsConstructor
-public class GroupsConsumer {
+public class AddingDefaultGroupsConsumer {
     private final GroupsService groupsService;
 
-    @KafkaListener(topics = "addDefaultGroups", groupId = "group-1")
+    @KafkaListener(topics = "addingDefaultGroups", groupId = "group-1")
     public void listenAddDefaultGroups(String message) {
         System.out.println("[Groups-Service] Received message: " + message);
         groupsService.addDefaultGroups(message);

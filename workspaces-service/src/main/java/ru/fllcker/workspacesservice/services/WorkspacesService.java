@@ -11,7 +11,7 @@ import ru.fllcker.workspacesservice.dto.User;
 import ru.fllcker.workspacesservice.models.Workspace;
 import ru.fllcker.workspacesservice.models.WorkspaceUser;
 import ru.fllcker.workspacesservice.mq.AddingPersonalGroupProducer;
-import ru.fllcker.workspacesservice.mq.WorkspacesProducer;
+import ru.fllcker.workspacesservice.mq.AddingDefaultGroupsProducer;
 import ru.fllcker.workspacesservice.repositories.IWorkspaceUserRepository;
 import ru.fllcker.workspacesservice.repositories.IWorkspacesRepository;
 import ru.fllcker.workspacesservice.security.providers.AuthProvider;
@@ -25,7 +25,7 @@ public class WorkspacesService {
     private final IWorkspaceUserRepository workspaceUserRepository;
     private final AuthProvider authProvider;
     private final UsersClient usersClient;
-    private final WorkspacesProducer workspacesProducer;
+    private final AddingDefaultGroupsProducer workspacesProducer;
     private final AddingPersonalGroupProducer addingPersonalGroupProducer;
 
     public Workspace create(CreateWorkspaceDto createWorkspaceDto) {

@@ -6,10 +6,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class WorkspacesProducer {
+public class AddingDefaultGroupsProducer {
     private final KafkaTemplate<String, String> kafkaTemplate;
 
     public void executeAddDefaultGroups(String workspaceId) {
-        kafkaTemplate.send("addDefaultGroups", workspaceId);
+        kafkaTemplate.send("addingDefaultGroups", workspaceId);
     }
 }
