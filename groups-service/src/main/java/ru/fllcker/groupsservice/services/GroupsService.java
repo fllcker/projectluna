@@ -8,6 +8,7 @@ import ru.fllcker.groupsservice.clients.UsersClient;
 import ru.fllcker.groupsservice.clients.WorkspacesClient;
 import ru.fllcker.groupsservice.dto.AddingPersonalGroupDto;
 import ru.fllcker.groupsservice.dto.CreateGroupDto;
+import ru.fllcker.groupsservice.dto.GroupAndMembersDto;
 import ru.fllcker.groupsservice.dto.User;
 import ru.fllcker.groupsservice.models.Group;
 import ru.fllcker.groupsservice.models.GroupUser;
@@ -37,6 +38,22 @@ public class GroupsService {
                 .build();
 
         return groupsRepository.save(group);
+    }
+
+    public List<GroupAndMembersDto> findGroupsByWorkspace(String workspaceId, String userEmail) {
+        if (!workspacesClient.isContainsInWorkspaces(workspaceId, userEmail))
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN, "No access!");
+
+        User user = usersClient.findByEmail(userEmail);
+
+        List<Group> groups = groupsRepository.findByWorkspaceId(workspaceId);
+        List<String> groupsIds = groups.stream().map(Group::getId).toList();
+        List<GroupUser> relations = groupUserRepository.findByGroupIdIn(groupsIds);
+
+        return groups.stream().map(group -> {
+            GroupUser rel = relations.stream().filter(v -> v.getGroupId().equals(group.getId())).findFirst().orElse(null);
+            return new GroupAndMembersDto(group, rel);
+        }).toList();
     }
 
     public void addDefaultGroups(String workspaceId) {

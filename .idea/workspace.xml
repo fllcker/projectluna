@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="auth-service, users-service: create-user (rest) changed to amqp execute">
-      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/mq/GroupsConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/mq/AddingDefaultGroupsConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/mq/WorkspacesProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/mq/AddingDefaultGroupsProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/services/WorkspacesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/services/WorkspacesService.java" afterDir="false" />
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="invitations-service: added method for find invitations for user">
+      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/dto/GroupAndMembersDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/controllers/GroupsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/controllers/GroupsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/repositories/IGroupUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/repositories/IGroupUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/repositories/IGroupsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/repositories/IGroupsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/services/GroupsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/services/GroupsService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -377,7 +380,7 @@
       <workItem from="1683918613233" duration="3306000" />
       <workItem from="1683968788483" duration="8862000" />
       <workItem from="1683988982667" duration="17308000" />
-      <workItem from="1684047795798" duration="1662000" />
+      <workItem from="1684047795798" duration="4165000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -589,7 +592,28 @@
       <option name="project" value="LOCAL" />
       <updated>1684049326647</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="groups, workspaces service: refactor producer, consumer names">
+      <created>1684049608112</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1684049608112</updated>
+    </task>
+    <task id="LOCAL-00032" summary="workspaces-service: +findById to controller">
+      <created>1684052768046</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1684052768046</updated>
+    </task>
+    <task id="LOCAL-00033" summary="invitations-service: added method for find invitations for user">
+      <created>1684052783983</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1684052783983</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -618,9 +642,6 @@
       <path value="$PROJECT_DIR$/groups-service" />
       <path value="$PROJECT_DIR$/invitations-service" />
     </ignored-roots>
-    <MESSAGE value="added auth-service, with tokens repository and service" />
-    <MESSAGE value="auth-service: +jwt authentication" />
-    <MESSAGE value="method findByEmail (users-controller): change pathvar to param&#10;&#10;added method existsByEmail to users-controller" />
     <MESSAGE value="added objectMapper bean, corsConfigurer bean" />
     <MESSAGE value="fixed api-gateway cors problem" />
     <MESSAGE value="fix config-service problem with main label" />
@@ -643,7 +664,10 @@
     <MESSAGE value="added producer, consumer, service-method to add personal group for everyone new member" />
     <MESSAGE value="added swagger to each microservice, moved kafka configuration to config-server" />
     <MESSAGE value="auth-service, users-service: create-user (rest) changed to amqp execute" />
-    <option name="LAST_COMMIT_MESSAGE" value="auth-service, users-service: create-user (rest) changed to amqp execute" />
+    <MESSAGE value="groups, workspaces service: refactor producer, consumer names" />
+    <MESSAGE value="workspaces-service: +findById to controller" />
+    <MESSAGE value="invitations-service: added method for find invitations for user" />
+    <option name="LAST_COMMIT_MESSAGE" value="invitations-service: added method for find invitations for user" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
