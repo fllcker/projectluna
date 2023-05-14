@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="groups-service: added method to delete task">
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="groups-service: added method to find tasks by workspace">
+      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/filter/PrivateFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/filters/PrivateFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/security/filter/PrivateFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/controllers/TasksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/controllers/TasksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/repositories/ITasksRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/repositories/ITasksRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/services/TasksService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/services/TasksService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +78,9 @@
           <activation />
         </task>
         <task path="$PROJECT_DIR$/tasks-service">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
           <activation />
         </task>
         <projects_view>
@@ -150,11 +153,11 @@
       <recent name="C:\Users\fllcker\IdeaProjects\projectluna\tasks-service\src\main\java\ru\fllcker\tasksservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.fllcker.groupsservice.security.filter" />
+      <recent name="ru.fllcker.usersservice.filters" />
       <recent name="ru.fllcker.tasksservice.clients" />
       <recent name="ru.fllcker.tasksservice.dto" />
       <recent name="ru.fllcker.workspacesservice.dto" />
-      <recent name="ru.fllcker.invitationsservice.clients" />
-      <recent name="ru.fllcker.invitationsservice.dto" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -164,11 +167,11 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.tasks-service [bootJar]">
-    <configuration name="api-gateway [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.workspaces-service [bootJar]">
+    <configuration name="groups-service [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/groups-service" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -187,32 +190,10 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="auth-service [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="invitations-service [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/auth-service" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="bootJar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="config-server [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/config-server" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/invitations-service" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -235,6 +216,28 @@
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/tasks-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="users-service [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/users-service" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -339,9 +342,9 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.api-gateway [bootJar]" />
-      <item itemvalue="Gradle.auth-service [bootJar]" />
-      <item itemvalue="Gradle.config-server [bootJar]" />
+      <item itemvalue="Gradle.groups-service [bootJar]" />
+      <item itemvalue="Gradle.invitations-service [bootJar]" />
+      <item itemvalue="Gradle.users-service [bootJar]" />
       <item itemvalue="Gradle.tasks-service [bootJar]" />
       <item itemvalue="Gradle.workspaces-service [bootJar]" />
       <item itemvalue="Spring Boot.GroupsServiceApplication" />
@@ -356,11 +359,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.tasks-service [bootJar]" />
         <item itemvalue="Gradle.workspaces-service [bootJar]" />
-        <item itemvalue="Gradle.api-gateway [bootJar]" />
-        <item itemvalue="Gradle.auth-service [bootJar]" />
-        <item itemvalue="Gradle.config-server [bootJar]" />
+        <item itemvalue="Gradle.users-service [bootJar]" />
+        <item itemvalue="Gradle.tasks-service [bootJar]" />
+        <item itemvalue="Gradle.invitations-service [bootJar]" />
+        <item itemvalue="Gradle.groups-service [bootJar]" />
       </list>
     </recent_temporary>
   </component>
@@ -382,7 +385,8 @@
       <workItem from="1683988982667" duration="17308000" />
       <workItem from="1684047795798" duration="5273000" />
       <workItem from="1684059763692" duration="4136000" />
-      <workItem from="1684067815508" duration="4155000" />
+      <workItem from="1684067815508" duration="5573000" />
+      <workItem from="1684092993038" duration="1121000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -678,7 +682,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684072658900</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="groups-service: added method to find tasks by workspace">
+      <created>1684072890637</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1684072890637</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,7 +718,6 @@
       <path value="$PROJECT_DIR$/groups-service" />
       <path value="$PROJECT_DIR$/invitations-service" />
     </ignored-roots>
-    <MESSAGE value="groups-service: fix import in security config" />
     <MESSAGE value="init groups-service, added exceptions and security" />
     <MESSAGE value="groups-service: added yml configuration, added models and repositories for group, group-user (relations)" />
     <MESSAGE value="groups-service: added ability to create new groups" />
@@ -732,7 +742,8 @@
     <MESSAGE value="groups-service: added create method in controller" />
     <MESSAGE value="groups-service: added method to change group in task" />
     <MESSAGE value="groups-service: added method to delete task" />
-    <option name="LAST_COMMIT_MESSAGE" value="groups-service: added method to delete task" />
+    <MESSAGE value="groups-service: added method to find tasks by workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="groups-service: added method to find tasks by workspace" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
