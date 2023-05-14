@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import ru.fllcker.workspacesservice.dto.CreateWorkspaceDto;
 import ru.fllcker.workspacesservice.models.Workspace;
+import ru.fllcker.workspacesservice.models.WorkspaceUser;
 import ru.fllcker.workspacesservice.services.WorkspacesService;
 
 import java.util.List;
@@ -29,13 +30,20 @@ public class WorkspacesController {
     }
 
     @GetMapping("id/{id}")
-    public Workspace findById(@PathVariable String id) {
-        return workspacesService.findById(id);
+    public ResponseEntity<Workspace> findById(@PathVariable String id) {
+        Workspace workspace = workspacesService.findById(id);
+        return ResponseEntity.ok(workspace);
     }
 
     @GetMapping("by/member")
     public ResponseEntity<List<Workspace>> findUserWorkspaces() {
         List<Workspace> userWorkspaces = workspacesService.findUserWorkspaces();
         return ResponseEntity.ok(userWorkspaces);
+    }
+
+    @GetMapping("members/{id}")
+    public ResponseEntity<List<WorkspaceUser>> findWorkspaceMembers(@PathVariable String id) {
+        List<WorkspaceUser> workspaceUsers = workspacesService.findWorkspaceMembers(id);
+        return ResponseEntity.ok(workspaceUsers);
     }
 }

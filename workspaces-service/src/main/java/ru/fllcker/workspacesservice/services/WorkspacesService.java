@@ -77,4 +77,15 @@ public class WorkspacesService {
     public List<Workspace> findUserWorkspaces() {
         return findUserWorkspaces(authProvider.getSubject());
     }
+
+    public List<WorkspaceUser> findWorkspaceMembers(String id) {
+        List<WorkspaceUser> members = workspaceUserRepository.findByWorkspaceId(id);
+
+        // Verify access
+        User user = usersClient.findByEmail(authProvider.getSubject());
+        long count = members.stream().filter(v -> v.getUserId().equals(user.getId())).count();
+        if (count == 0) throw new ResponseStatusException(HttpStatus.FORBIDDEN, "No access!");
+
+        return members;
+    }
 }
