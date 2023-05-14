@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="groups-service: added method to find tasks by workspace">
-      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/filter/PrivateFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/filters/PrivateFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/security/filter/PrivateFilter.java" afterDir="false" />
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="workspaces, users, groups service: added filter for secure private cross-services methods">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/utils/HttpUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/utils/HttpUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/utils/HttpUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/utils/HttpUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/utils/HttpUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/clients/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/clients/UsersClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,11 +157,11 @@
       <recent name="C:\Users\fllcker\IdeaProjects\projectluna\tasks-service\src\main\java\ru\fllcker\tasksservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.fllcker.workspacesservice.utils" />
+      <recent name="ru.fllcker.tasksservice.utils" />
+      <recent name="ru.fllcker.invitationsservice.utils" />
+      <recent name="ru.fllcker.groupsservice.utils" />
       <recent name="ru.fllcker.groupsservice.security.filter" />
-      <recent name="ru.fllcker.usersservice.filters" />
-      <recent name="ru.fllcker.tasksservice.clients" />
-      <recent name="ru.fllcker.tasksservice.dto" />
-      <recent name="ru.fllcker.workspacesservice.dto" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -386,7 +390,7 @@
       <workItem from="1684047795798" duration="5273000" />
       <workItem from="1684059763692" duration="4136000" />
       <workItem from="1684067815508" duration="5573000" />
-      <workItem from="1684092993038" duration="1121000" />
+      <workItem from="1684092993038" duration="1873000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -689,7 +693,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684072890637</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="workspaces, users, groups service: added filter for secure private cross-services methods">
+      <created>1684094171270</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1684094171270</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -718,7 +729,6 @@
       <path value="$PROJECT_DIR$/groups-service" />
       <path value="$PROJECT_DIR$/invitations-service" />
     </ignored-roots>
-    <MESSAGE value="init groups-service, added exceptions and security" />
     <MESSAGE value="groups-service: added yml configuration, added models and repositories for group, group-user (relations)" />
     <MESSAGE value="groups-service: added ability to create new groups" />
     <MESSAGE value="groups-service: added method - addDefaultGroups" />
@@ -743,7 +753,8 @@
     <MESSAGE value="groups-service: added method to change group in task" />
     <MESSAGE value="groups-service: added method to delete task" />
     <MESSAGE value="groups-service: added method to find tasks by workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="groups-service: added method to find tasks by workspace" />
+    <MESSAGE value="workspaces, users, groups service: added filter for secure private cross-services methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspaces, users, groups service: added filter for secure private cross-services methods" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
