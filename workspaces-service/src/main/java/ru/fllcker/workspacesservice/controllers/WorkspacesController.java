@@ -28,6 +28,11 @@ public class WorkspacesController {
         return ResponseEntity.ok(workspace);
     }
 
+    @GetMapping("id/{id}")
+    public Workspace findById(@PathVariable String id) {
+        return workspacesService.findById(id);
+    }
+
     @GetMapping("by/member")
     public ResponseEntity<List<Workspace>> findUserWorkspaces() {
         List<Workspace> userWorkspaces = workspacesService.findUserWorkspaces();
