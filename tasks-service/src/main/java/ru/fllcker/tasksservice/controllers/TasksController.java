@@ -39,4 +39,10 @@ public class TasksController {
         tasksService.updateTaskGroup(id, groupId);
         return ResponseEntity.ok().build();
     }
+
+    @DeleteMapping("id/{id}")
+    public ResponseEntity<String> deleteById(@PathVariable String id) {
+        tasksService.deleteById(id);
+        return ResponseEntity.ok().build();
+    }
 }

@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import ru.fllcker.tasksservice.clients.GroupsClient;
 import ru.fllcker.tasksservice.clients.UsersClient;
-import ru.fllcker.tasksservice.clients.WorkspacesClient;
 import ru.fllcker.tasksservice.dto.CreateTaskDto;
 import ru.fllcker.tasksservice.dto.Group;
 import ru.fllcker.tasksservice.dto.User;
@@ -69,5 +68,12 @@ public class TasksService {
         Task task = this.findById(id);
         task.setGroupId(group.getId());
         tasksRepository.save(task);
+    }
+
+    public void deleteById(String id) {
+        if (checkAccessToTask(id, authProvider.getSubject()))
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN, "No access!");
+
+        tasksRepository.deleteById(id);
     }
 }
