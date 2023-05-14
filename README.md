@@ -8,3 +8,12 @@
 
 
 <p>Project Luna is a project that includes several productivity services, among which are: a calendar, a to-do board. Interestingly, the project uses kafka to provide communication between services, as well as mongodb as a database.</p>
+
+
+<h1>How to launch</h1>
+<ol>
+  <li>Run <strong>Kafka</strong> in <strong>Docker</strong> (on port - <strong>29092</strong>)</li>
+  <li>Create repo for config-server (from <strong>CONFIG_SERVER_EXAMPLE</strong> dir), set url in yml configuration in config-server</li>
+  <li>Configure connection to <strong>Mongo</strong> in these services: auth, groups, invitations, tasks, users, workspaces</li>
+  <li>Run in order: config-server, eureka-server, api-gateway, (wait), others</li>
+</ol>
