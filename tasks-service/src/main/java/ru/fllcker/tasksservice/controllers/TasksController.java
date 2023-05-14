@@ -34,6 +34,12 @@ public class TasksController {
         return ResponseEntity.ok(tasks);
     }
 
+    @GetMapping("workspace/{workspaceId}")
+    public ResponseEntity<List<Task>> findByWorkspaceId(@PathVariable String workspaceId) {
+        List<Task> tasks = tasksService.findByWorkspaceId(workspaceId);
+        return ResponseEntity.ok(tasks);
+    }
+
     @PutMapping("id/{id}/group/{groupId}")
     public ResponseEntity<String> updateTaskGroup(@PathVariable String id, @PathVariable String groupId) {
         tasksService.updateTaskGroup(id, groupId);

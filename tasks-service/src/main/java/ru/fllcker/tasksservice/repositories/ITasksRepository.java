@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface ITasksRepository extends MongoRepository<Task, String> {
     List<Task> findByGroupId(String groupId);
+    List<Task> findByWorkspaceId(String workspaceId);
 }
