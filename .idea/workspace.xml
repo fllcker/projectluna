@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="workspaces, users, groups service: added filter for secure private cross-services methods">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/utils/HttpUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/utils/HttpUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/utils/HttpUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/utils/HttpUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/utils/HttpUtils.java" afterDir="false" />
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="added HttpUtils class with generateWithPrivateHeader method to these services: auth, groups, invitations, tasks, workspaces">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/clients/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/clients/UsersClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/clients/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/clients/UsersClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/clients/WorkspacesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/clients/WorkspacesClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/clients/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/clients/UsersClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/clients/WorkspacesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/clients/WorkspacesClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/clients/GroupsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/clients/GroupsClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/clients/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/clients/UsersClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/clients/WorkspacesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/clients/WorkspacesClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/clients/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/clients/UsersClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -390,7 +392,7 @@
       <workItem from="1684047795798" duration="5273000" />
       <workItem from="1684059763692" duration="4136000" />
       <workItem from="1684067815508" duration="5573000" />
-      <workItem from="1684092993038" duration="1873000" />
+      <workItem from="1684092993038" duration="2127000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -700,7 +702,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684094171270</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="added HttpUtils class with generateWithPrivateHeader method to these services: auth, groups, invitations, tasks, workspaces">
+      <created>1684094872395</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1684094872395</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -729,7 +738,6 @@
       <path value="$PROJECT_DIR$/groups-service" />
       <path value="$PROJECT_DIR$/invitations-service" />
     </ignored-roots>
-    <MESSAGE value="groups-service: added yml configuration, added models and repositories for group, group-user (relations)" />
     <MESSAGE value="groups-service: added ability to create new groups" />
     <MESSAGE value="groups-service: added method - addDefaultGroups" />
     <MESSAGE value="groups-service: added consumer (kafka) for addDefaultGroups&#10;workspaces-service: added producer to execute addDefaultGroups from groups-service" />
@@ -754,7 +762,8 @@
     <MESSAGE value="groups-service: added method to delete task" />
     <MESSAGE value="groups-service: added method to find tasks by workspace" />
     <MESSAGE value="workspaces, users, groups service: added filter for secure private cross-services methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspaces, users, groups service: added filter for secure private cross-services methods" />
+    <MESSAGE value="added HttpUtils class with generateWithPrivateHeader method to these services: auth, groups, invitations, tasks, workspaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="added HttpUtils class with generateWithPrivateHeader method to these services: auth, groups, invitations, tasks, workspaces" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
