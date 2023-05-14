@@ -4,6 +4,7 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Document(collection = "tasks")
@@ -19,11 +20,11 @@ public class Task {
     @Builder.Default
     private LocalTime createdTime = LocalTime.now();
 
-    private String value;
+    private String title;
 
     private String description;
 
-    private LocalTime deadLine;
+    private LocalDate deadLine;
 
     private String groupId;
 

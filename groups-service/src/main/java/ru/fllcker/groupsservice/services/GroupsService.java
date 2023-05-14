@@ -102,4 +102,13 @@ public class GroupsService {
 
         groupUserRepository.save(groupUser);
     }
+
+    public Group findByIdIfUserIsMember(String id, String accessEmail) {
+        User user = usersClient.findByEmail(accessEmail);
+
+        GroupUser groupUser = groupUserRepository.findByGroupIdAndUserId(id, user.getId())
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Group not found!"));
+
+        return this.findById(groupUser.getGroupId());
+    }
 }
