@@ -64,5 +64,9 @@ public class InvitationsService {
         // adding user to workspace
         AddMemberToWorkspaceDto addMemberToWorkspaceDto = new AddMemberToWorkspaceDto(invitation.getWorkspaceId(), invitation.getTargetId());
         addingMemberProducer.executeAddMemberToWorkspace(addMemberToWorkspaceDto);
+
+        // change accepted status
+        invitation.setAccepted(true);
+        invitationsRepository.save(invitation);
     }
 }
