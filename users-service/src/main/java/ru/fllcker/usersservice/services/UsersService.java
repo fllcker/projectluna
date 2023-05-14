@@ -14,9 +14,6 @@ public class UsersService {
     private final IUsersRepository usersRepository;
 
     public User create(CreateUserDto createUserDto) {
-        if (usersRepository.existsByEmail(createUserDto.getEmail()))
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User with this email already exists!");
-
         User user = User.builder()
                 .email(createUserDto.getEmail())
                 .password(createUserDto.getPassword())

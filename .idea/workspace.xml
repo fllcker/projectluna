@@ -4,25 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="added producer, consumer, service-method to add personal group for everyone new member">
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="added swagger to each microservice, moved kafka configuration to config-server">
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/mq/CreateUserProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/mq/CreateUserConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/configs/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/clients/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/clients/UsersClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/services/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/services/JwtProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/services/JwtProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/groups-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/security/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/groups-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invitations-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/invitations-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/security/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invitations-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/invitations-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/java/ru/fllcker/usersservice/services/UsersService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspaces-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/security/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,19 +64,33 @@
         <task path="$PROJECT_DIR$/users-service">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/api-gateway">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/auth-service">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/config-server">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/eureka-server">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/groups-service">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/invitations-service">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/workspaces-service">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/tasks-service">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="users-service" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="users-service" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -134,8 +142,8 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "spring.configuration.checksum": "b3b403da5be38aee7e90c18089171b9b",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "2c81c360a7d72aa41a998c974e8f518d",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -162,24 +170,11 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
-    <configuration name="GenerateSecrets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.fllcker.authservice.utils.GenerateSecrets" />
-      <module name="auth-service.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.fllcker.authservice.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="users-service [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.tasks-service [bootJar]">
+    <configuration name="api-gateway [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/users-service" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -187,7 +182,95 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="auth-service [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/auth-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="config-server [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/config-server" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="tasks-service [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/tasks-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="workspaces-service [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/workspaces-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -262,8 +345,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.GenerateSecrets" />
-      <item itemvalue="Gradle.users-service [build]" />
+      <item itemvalue="Gradle.api-gateway [bootJar]" />
+      <item itemvalue="Gradle.auth-service [bootJar]" />
+      <item itemvalue="Gradle.config-server [bootJar]" />
+      <item itemvalue="Gradle.tasks-service [bootJar]" />
+      <item itemvalue="Gradle.workspaces-service [bootJar]" />
       <item itemvalue="Spring Boot.GroupsServiceApplication" />
       <item itemvalue="Spring Boot.InvitationsServiceApplication" />
       <item itemvalue="Spring Boot.TasksServiceApplication" />
@@ -276,8 +362,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GenerateSecrets" />
-        <item itemvalue="Gradle.users-service [build]" />
+        <item itemvalue="Gradle.tasks-service [bootJar]" />
+        <item itemvalue="Gradle.workspaces-service [bootJar]" />
+        <item itemvalue="Gradle.api-gateway [bootJar]" />
+        <item itemvalue="Gradle.auth-service [bootJar]" />
+        <item itemvalue="Gradle.config-server [bootJar]" />
       </list>
     </recent_temporary>
   </component>
@@ -296,7 +385,8 @@
       <workItem from="1683898346459" duration="11000" />
       <workItem from="1683918613233" duration="3306000" />
       <workItem from="1683968788483" duration="8862000" />
-      <workItem from="1683988982667" duration="16752000" />
+      <workItem from="1683988982667" duration="17308000" />
+      <workItem from="1684047795798" duration="1458000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -494,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684006876717</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="added swagger to each microservice, moved kafka configuration to config-server">
+      <created>1684010536246</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1684010536247</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +620,6 @@
       <path value="$PROJECT_DIR$/groups-service" />
       <path value="$PROJECT_DIR$/invitations-service" />
     </ignored-roots>
-    <MESSAGE value="added api-gateway" />
     <MESSAGE value="added users-service, with private method create" />
     <MESSAGE value="added auth-service, with tokens repository and service" />
     <MESSAGE value="auth-service: +jwt authentication" />
@@ -548,7 +644,8 @@
     <MESSAGE value="invitations-service: corrected model, adding methods to create and accept invitations" />
     <MESSAGE value="workspaces-service: added consumer for adding member to workspace" />
     <MESSAGE value="added producer, consumer, service-method to add personal group for everyone new member" />
-    <option name="LAST_COMMIT_MESSAGE" value="added producer, consumer, service-method to add personal group for everyone new member" />
+    <MESSAGE value="added swagger to each microservice, moved kafka configuration to config-server" />
+    <option name="LAST_COMMIT_MESSAGE" value="added swagger to each microservice, moved kafka configuration to config-server" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

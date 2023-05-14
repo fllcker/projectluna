@@ -1,5 +1,6 @@
 package ru.fllcker.authservice.services;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -9,11 +10,9 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 import ru.fllcker.authservice.clients.UsersClient;
 import ru.fllcker.authservice.domain.JwtAuthentication;
-import ru.fllcker.authservice.dto.JwtResponse;
-import ru.fllcker.authservice.dto.SignInDto;
-import ru.fllcker.authservice.dto.SignUpDto;
-import ru.fllcker.authservice.dto.User;
+import ru.fllcker.authservice.dto.*;
 import ru.fllcker.authservice.models.Token;
+import ru.fllcker.authservice.mq.CreateUserProducer;
 
 @Service
 @Transactional
@@ -23,6 +22,8 @@ public class AuthService {
     private final JwtProvider jwtProvider;
     private final TokensService tokensService;
     private final UsersClient usersClient;
+    private final CreateUserProducer createUserProducer;
+    private final ObjectMapper objectMapper;
 
     public JwtResponse login(SignInDto dto) {
         User user = usersClient.findByEmail(dto.getEmail());
@@ -38,6 +39,9 @@ public class AuthService {
     }
 
     public JwtResponse signup(SignUpDto dto) {
+        if (usersClient.existsByEmail(dto.getEmail()))
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User with this email already exists!");
+
         User user = User.builder()
                 .email(dto.getEmail())
                 .password(encoder.encode(dto.getPassword()))
@@ -45,7 +49,8 @@ public class AuthService {
                 .lastName(dto.getLastName())
                 .build();
 
-        usersClient.create(user);
+        CreateUserDto createUserDto = objectMapper.convertValue(user, CreateUserDto.class);
+        createUserProducer.executeCreateUser(createUserDto);
 
         String accessToken = jwtProvider.generateToken(user, false);
         String refreshToken = jwtProvider.generateToken(user, true);

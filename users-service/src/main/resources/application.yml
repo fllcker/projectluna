@@ -14,4 +14,4 @@ spring:
     import: optional:configserver:http://localhost:8888
 
   profiles:
-    active: eclient, swagger
+    active: eclient, swagger, kafka
