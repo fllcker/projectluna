@@ -14,4 +14,10 @@ spring:
     import: optional:configserver:http://localhost:8888
 
   profiles:
-    active: common, eclient, secrets, kafka, swagger
+    active: common, eclient, secrets, kafka
+
+springdoc:
+  swagger-ui:
+    path: /invitations/swagger/swagger-ui.html
+  api-docs:
+    path: /invitations/swagger/swagger-ad

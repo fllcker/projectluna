@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="added HttpUtils class with generateWithPrivateHeader method to these services: auth, groups, invitations, tasks, workspaces">
+    <list default="true" id="94351d99-4384-45ef-bd5d-7fd099025507" name="Changes" comment="users-service: added forgotten config profile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/clients/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/fllcker/authservice/clients/UsersClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/clients/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/clients/UsersClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/clients/WorkspacesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/java/ru/fllcker/groupsservice/clients/WorkspacesClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/clients/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/clients/UsersClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/clients/WorkspacesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/invitations-service/src/main/java/ru/fllcker/invitationsservice/clients/WorkspacesClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/clients/GroupsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/clients/GroupsClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/clients/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/clients/UsersClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/clients/WorkspacesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/java/ru/fllcker/tasksservice/clients/WorkspacesClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/clients/UsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/java/ru/fllcker/workspacesservice/clients/UsersClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groups-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/groups-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invitations-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/invitations-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tasks-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/users-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workspaces-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/workspaces-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +105,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-config-server/4.0.2/3e68bd37b0d7727360df9f3979ccfc7d1f9e5bd2/spring-cloud-config-server-4.0.2-sources.jar!/org/springframework/cloud/config/server/environment/NoSuchLabelException.java" root0="SKIP_INSPECTION" />
@@ -392,7 +390,14 @@
       <workItem from="1684047795798" duration="5273000" />
       <workItem from="1684059763692" duration="4136000" />
       <workItem from="1684067815508" duration="5573000" />
-      <workItem from="1684092993038" duration="2127000" />
+      <workItem from="1684092993038" duration="2254000" />
+      <workItem from="1684160850056" duration="587000" />
+      <workItem from="1684181916490" duration="115000" />
+      <workItem from="1684240188522" duration="782000" />
+      <workItem from="1684267461339" duration="1491000" />
+      <workItem from="1684323495196" duration="28000" />
+      <workItem from="1684326961963" duration="717000" />
+      <workItem from="1684335257603" duration="171000" />
     </task>
     <task id="LOCAL-00001" summary="init root project">
       <created>1683624703190</created>
@@ -709,7 +714,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684094872395</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="added PrivateHeader to each executing private methods with restTemplate">
+      <created>1684095181503</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1684095181503</updated>
+    </task>
+    <task id="LOCAL-00047" summary="users-service: added forgotten config profile">
+      <created>1684181959437</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1684181959437</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -738,8 +757,6 @@
       <path value="$PROJECT_DIR$/groups-service" />
       <path value="$PROJECT_DIR$/invitations-service" />
     </ignored-roots>
-    <MESSAGE value="groups-service: added ability to create new groups" />
-    <MESSAGE value="groups-service: added method - addDefaultGroups" />
     <MESSAGE value="groups-service: added consumer (kafka) for addDefaultGroups&#10;workspaces-service: added producer to execute addDefaultGroups from groups-service" />
     <MESSAGE value="init invitations-service with security, configuration" />
     <MESSAGE value="invitations-service: added invitation model and repository" />
@@ -763,7 +780,9 @@
     <MESSAGE value="groups-service: added method to find tasks by workspace" />
     <MESSAGE value="workspaces, users, groups service: added filter for secure private cross-services methods" />
     <MESSAGE value="added HttpUtils class with generateWithPrivateHeader method to these services: auth, groups, invitations, tasks, workspaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="added HttpUtils class with generateWithPrivateHeader method to these services: auth, groups, invitations, tasks, workspaces" />
+    <MESSAGE value="added PrivateHeader to each executing private methods with restTemplate" />
+    <MESSAGE value="users-service: added forgotten config profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="users-service: added forgotten config profile" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
